@@ -1,9 +1,9 @@
 {
     "ticket": {
-        "magicLink": "",
-        "festivalName": "",
+        "magicLink": "https://www.ticketswap.com",
+        "festivalName": "Rijksmuseum Vermeer Exhibition",
         "otherCategory": "",
-        "ticketName": ""
+        "ticketName": "regular-adult"
     },
     "notification": {
         "sid": "",

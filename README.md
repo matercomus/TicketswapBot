@@ -9,12 +9,11 @@ Bot doesn't confirm email address for login by itself
 - Python 3
 - Google Chrome
 - ChromeDriver
-- Twilio account
 
 ## Usage
 1. Clone the project:
    ```
-   $ git clone https://github.com/coolsarne/TicketswapBot.git
+   $ git clone https://github.com/matercomus/TicketswapBot.git
    ```
 
 2. Install dependencies:

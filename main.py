@@ -40,8 +40,7 @@ def main():
     logging.info("Reserving ticket")
     bot.reserve_ticket()
 
-    logging.info("Dialing user")
-    bot.dial_number(notification["twilioPhone"], notification["phone"], notification["sid"], notification["token"])
+    logging.info("Ticket reserved!")
 
     logging.info("Waiting for checkout completion")
     time.sleep(900) # 15 minutes of buffer time to complete checkout

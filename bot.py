@@ -1,7 +1,5 @@
 from webdriver import WebDriver
 from selenium.common.exceptions import NoSuchElementException
-from twilio.rest import Client
-import smtplib
 import time
 import random
 
@@ -47,7 +45,7 @@ class Bot:
 
     def find_available(self):
         try:
-            self.webdriver.driver.find_element_by_xpath('//*[text()="Er worden op dit moment geen tickets aangeboden."]')
+            self.webdriver.driver.find_element_by_xpath('//*[text()="No tickets available at the moment."]')
         except NoSuchElementException:
             return True
         return False
@@ -60,12 +58,4 @@ class Bot:
     def reserve_ticket(self):
         self.select_item_by_x_path("/html/body/div[1]/div[2]/div[3]/a[1]")
         time.sleep(0.355)
-        self.select_item_by_x_path('//*[text()="Koop ticket"]')
-
-    def dial_number(self, twilioNumber, number, sid, token):
-        TWIML_INSTRUCTIONS_URL = \
-            "https://static.fullstackpython.com/phone-calls-python.xml"
-        client = Client(sid, token)
-
-        client.calls.create(to=number, from_=twilioNumber,
-                            url=TWIML_INSTRUCTIONS_URL, method="GET")
+        self.select_item_by_x_path('//*[text()="Buy ticket"]')

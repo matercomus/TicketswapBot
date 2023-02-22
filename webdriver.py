@@ -61,8 +61,8 @@ class WebDriver:
 
     def get_options(self):
         options = webdriver.ChromeOptions()
-        options.add_argument("lang=nl-BE")
-        options.add_argument("start-maximized");
+        options.add_argument("lang=en_US")
+        options.add_argument("start-maximized")
         return options
 
 
